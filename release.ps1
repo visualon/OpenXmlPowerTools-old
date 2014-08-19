@@ -1,7 +1,7 @@
 param(
     [switch] $noPush,
     [ValidateSet('Debug', 'Release')]
-    [string] $cfg = 'Releasee'
+    [string] $cfg = 'Release'
 )
 
 

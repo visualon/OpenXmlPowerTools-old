@@ -1,20 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXmlPowerTools", "OpenXmlPowerTools.csproj", "{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{EC79F183-3873-4D35-AFC1-24876913090E}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+		OpenXmlPowerTools.proj = OpenXmlPowerTools.proj
+		README.md = README.md
+		release.ps1 = release.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug35|Any CPU = Debug35|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Release35|Any CPU = Release35|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Debug35|Any CPU.ActiveCfg = Debug35|Any CPU
+		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Debug35|Any CPU.Build.0 = Debug35|Any CPU
 		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Release35|Any CPU.ActiveCfg = Release35|Any CPU
+		{6F957FF3-AFCC-4D69-8FBC-71AE21BC45C9}.Release35|Any CPU.Build.0 = Release35|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
