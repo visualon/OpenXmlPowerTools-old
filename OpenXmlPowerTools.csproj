@@ -82,7 +82,7 @@
     <Compile Include="MarkupSimplifier.cs" />
     <Compile Include="OpenXmlRegex.cs" />
     <Compile Include="PegBase.cs" />
-    <Compile Include="PresentationBuilder.cs" />
+    <Compile Include="PresentationBuilder.cs" Condition="'$(TargetFrameworkVersion)' == 'v4.5'" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PtOpenXmlDocument.cs" />
     <Compile Include="PtOpenXmlUtil.cs" />
