@@ -50,6 +50,12 @@
   <PropertyGroup>
     <Framework>net$(TargetFrameworkVersion.Substring(1).Replace(".", ""))</Framework>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>OpenXmlPowerTools.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml">
       <HintPath>..\..\..\..\NuGet\Packages\VisualOn.DocumentFormat.OpenXml.2.5\lib\$(Framework)\DocumentFormat.OpenXml.dll</HintPath>
@@ -95,6 +101,7 @@
     <None Include="OpenXmlPowerTools.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <None Include="OpenXmlPowerTools.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
