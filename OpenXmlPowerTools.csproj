@@ -58,6 +58,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Threading" Condition="'$(TargetFrameworkVersion)' == 'v3.5'">
+      <HintPath>..\..\..\..\NuGet\Packages\TaskParallelLibrary.1.0.2856.0\lib\Net35\System.Threading.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
@@ -74,6 +77,7 @@
     <Compile Include="GetListItemText_sv_SE.cs" />
     <Compile Include="GetListItemText_tr_TR.cs" />
     <Compile Include="HtmlConverter.cs" />
+    <Compile Include="LegacyExtensions.cs" Condition="'$(TargetFrameworkVersion)' == 'v3.5'" />
     <Compile Include="ListItemRetriever.cs" />
     <Compile Include="MarkupSimplifier.cs" />
     <Compile Include="OpenXmlRegex.cs" />
@@ -91,6 +95,9 @@
     <Compile Include="WorksheetAccessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenXmlPowerTools.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

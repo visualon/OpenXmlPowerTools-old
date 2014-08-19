@@ -21,11 +21,8 @@ Version: 2.6.04
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using DocumentFormat.OpenXml.Packaging;
 
 namespace OpenXmlPowerTools
 {
@@ -85,7 +82,7 @@ namespace OpenXmlPowerTools
          * If trackRevisions == true for a PPTX
          *     Then code throws an exception
          */
-        public static int Replace(IEnumerable<XElement> content, Regex regex, string replacement, Func<XElement, Match, bool> doReplacement, 
+        public static int Replace(IEnumerable<XElement> content, Regex regex, string replacement, Func<XElement, Match, bool> doReplacement,
             bool trackRevisions, string author)
         {
             return ReplaceInternal(content, regex, replacement, doReplacement, trackRevisions, author);

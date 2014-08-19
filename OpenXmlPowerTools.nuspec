@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>VisualOn.OpenXmlPowerTools</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <authors>$author$</authors>
+        <owners>VisualOn GmbH</owners>
+        <licenseUrl>http://powertools.codeplex.com/license</licenseUrl>
+        <projectUrl>http://powertools.codeplex.com/license</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>$description$</description>
+        <copyright>Copyright 2012-2014 Microsoft Corporation</copyright>
+    </metadata>
+</package>
