@@ -16,7 +16,7 @@
         <MSBuild Projects="$(MSBuildProjectName).csproj" Targets="Build" BuildInParallel="true" Properties="Configuration=$(Configuration)35" />
         <Message Text="Building for framework 4.5" Importance="high" />
         <MSBuild Projects="$(MSBuildProjectName).csproj" Targets="Build" BuildInParallel="true" />
-        <Exec Command="nuget pack $(MSBuildProjectName).csproj -IncludeReferencedProjects -OutputDirectory $(Out)"/>
+        <Exec Command="nuget pack $(MSBuildProjectName).csproj -Properties &quot;Configuration=$(Configuration)&quot; -IncludeReferencedProjects -OutputDirectory $(Out)"/>
     </Target>
     
     <Target Name="_prep" BeforeTargets="NuGet">
