@@ -2445,7 +2445,7 @@ namespace OpenXmlPowerTools
                         });
                     return content;
                 });
-            return newContent;
+            return newContent.Cast<object>();
         }
 
         private class BorderMappingInfo
