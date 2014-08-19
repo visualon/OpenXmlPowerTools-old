@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="12.0">
+
+    <PropertyGroup>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+        <Out Condition="'$(Out)' == ''">$(MSBuildProjectDirectory)\bin</Out>
+    </PropertyGroup>
+        
+    <ItemGroup>
+        <_NuGetPackagesDelete Include="$(Out)\*.nupkg" />
+    </ItemGroup>
+
+    <Target Name="NuGet">
+        <Message Text="Building for framework 3.5" Importance="high" />
+        <MSBuild Projects="$(MSBuildProjectName).csproj" Targets="Build" BuildInParallel="true" Properies="Configuration=$(Configuration)35" />
+        <Message Text="Building for framework 4.5" Importance="high" />
+        <MSBuild Projects="$(MSBuildProjectName).csproj" Targets="Build" BuildInParallel="true" />
+        <Exec Command="nuget pack $(MSBuildProjectName).csproj -IncludeReferencedProjects -OutputDirectory $(Out)"/>
+    </Target>
+    
+    <Target Name="_prep" BeforeTargets="NuGet">
+        <MakeDir Directories="$(Out)" />
+        <Delete Files="@(_NuGetPackagesDelete)" />
+    </Target>
+    
+    <Target Name="_NuGetPush" AfterTargets="NuGet" Condition="'$(NoPush)' == 'false'">
+        <ItemGroup>
+            <_NuGetPackages Include="$(Out)\*.nupkg" />
+        </ItemGroup>
+        <Exec Command="nuget push %(_NuGetPackages.FullPath)" Condition="Exists('@(_NuGetPackages)')"/>
+    </Target>
+</Project>
