@@ -26,7 +26,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using DocumentFormat.OpenXml.Packaging;
 using System.Drawing;
@@ -1682,7 +1681,7 @@ namespace OpenXmlPowerTools
                     color1 = Convert.ToInt32(color1str, 16);
                 }
                 // if the above throws ArgumentException, FormatException, or OverflowException, then abort
-                catch (Exception) 
+                catch (Exception)
                 {
                     return sideToReplace;
                 }
@@ -2894,7 +2893,7 @@ namespace OpenXmlPowerTools
             '\x066B', // arabic decimal separator
             '\x066C', // arabic thousands separator
 
-            '\x0627', // arabic pipe 
+            '\x0627', // arabic pipe
 
             '\x20A0', // start currency symbols
             '\x20A1',
